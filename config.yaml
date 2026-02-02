@@ -1,6 +1,7 @@
 name: dm-data-unit-uploader-v2
 code: dm-data-unit-uploader-v2
 version: 0.1.0
+debug: true
 category: upload
 description: dm-data-unit-uploader-v2 plugin
 actions:
