@@ -1,8 +1,14 @@
 name: dm-data-unit-uploader
 code: dm-data-unit-uploader
-version: 2.0.0
+version: 2.1.0
 category: upload
 description: dm-data-unit-uploader plugin
+supported_data_types:
+  - image
+  - video
+  - text
+  - pcd
+  - audio
 actions:
   upload:
     entrypoint: plugin.upload.UploadAction
