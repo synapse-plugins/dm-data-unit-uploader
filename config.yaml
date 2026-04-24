@@ -1,9 +1,8 @@
-name: dm-data-unit-uploader-v2
-code: dm-data-unit-uploader-v2
-version: 0.1.0
-debug: true
+name: dm-data-unit-uploader
+code: dm-data-unit-uploader
+version: 2.0.0
 category: upload
-description: dm-data-unit-uploader-v2 plugin
+description: dm-data-unit-uploader plugin
 actions:
   upload:
     entrypoint: plugin.upload.UploadAction
@@ -19,4 +18,10 @@ actions:
     method: job
   add_task_data:
     entrypoint: .venv.lib.python3.12.site-packages.synapse_sdk.plugins.actions.add_task_data.action.AddTaskDataAction
+    method: job
+  export:
+    entrypoint: .venv.lib.python3.12.site-packages.synapse_sdk.plugins.actions.export.action.DefaultExportAction
+    method: job
+  to_task:
+    entrypoint: .venv.lib.python3.12.site-packages.synapse_sdk.plugins.actions.to_task.action.ToTaskAction
     method: job

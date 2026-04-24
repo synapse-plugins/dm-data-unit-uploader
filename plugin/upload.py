@@ -55,3 +55,14 @@ class UploadAction(DefaultUploadAction[UploadParams]):
 
     action_name = 'upload'
     params_model = UploadParams
+
+    def get_allowed_extensions(self) -> dict[str, list[str]] | None:
+        """Allow only MP4 for video, default extensions for other types."""
+        return {
+            'image': ['.jpg', '.jpeg', '.png'],
+            'video': ['.mp4'],  # Default: .mp4, .avi, .mov, .mkv, .webm, .flv, .wmv
+            'audio': ['.mp3', '.wav'],
+            'text': ['.txt', '.html'],
+            'pcd': ['.pcd'],
+            'data': ['.bin', '.json', '.fbx', '.xml'],
+        }
