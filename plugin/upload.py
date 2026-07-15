@@ -62,7 +62,7 @@ class UploadAction(DefaultUploadAction[UploadParams]):
             'image': ['.jpg', '.jpeg', '.png'],
             'video': ['.mp4'],  # Default: .mp4, .avi, .mov, .mkv, .webm, .flv, .wmv
             'audio': ['.mp3', '.wav'],
-            'text': ['.txt', '.html', '.csv'],
+            'text': ['.txt', '.html'],
             'pcd': ['.pcd'],
-            'data': ['.bin', '.json', '.fbx', '.xml'],
+            'data': ['.bin', '.json', '.fbx', '.xml', '.csv'],
         }
