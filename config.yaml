@@ -1,6 +1,6 @@
 name: dm-data-unit-uploader
 code: dm-data-unit-uploader
-version: 2.4.0
+version: 2.4.1
 category: upload
 description: dm-data-unit-uploader plugin
 supported_data_types:
