@@ -7,6 +7,24 @@
 ### Fixed
 ### Removed
 
+## [2.4.5] - 2026-08-24
+
+### Changed
+- `synapse-sdk` 핀을 `2026.1.169` → `2026.1.174` 로 올린다.
+  **플러그인 코드는 바뀌지 않았고, 업로드 동작도 v2.4.4 와 같다.** 사이에 들어간 SDK
+  변경 다섯(2026.1.170~174)은 **전부 export 경로**다 — ordering allowlist·재개 거절 사유
+  기록(SYN-7487), 호출자 지정 `page_size`(SYN-7487), annotation payload 를 URL 로 받아
+  병렬 인출(SYN-7490), 만료 payload URL 재발급(SYN-7490), 인출 재시도·재발급 예산
+  (SYN-7490). upload 경로 코드는 한 줄도 건드리지 않았다.
+
+  그럼에도 올리는 이유는 **upload 플러그인 7종의 SDK 핀을 한 버전으로 모으는 것**이다.
+  종전에 legacy 5종은 핀이 아예 없어(`synapse-sdk[all]`) agent env 빌드 시점의 최신이
+  깔렸고, timeseries 는 `2026.1.132` 에 머물러 있었다. 세 갈래를 하나로 맞춘다.
+
+  검증은 배포 전에 했다 — SDK 2026.1.174 wheel 을 격리 venv 에 깔고 `config.yaml` 의
+  action entrypoint 전부를 실제로 import 했고(6/6 해소), `upload` action 의 step
+  파이프라인이 8개 스텝으로 그대로 조립되는 것까지 확인했다.
+
 ## [2.4.4] - 2026-08-21
 
 ### Fixed
