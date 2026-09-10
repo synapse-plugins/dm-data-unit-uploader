@@ -1,6 +1,6 @@
 [project]
 name = "dm-data-unit-uploader-v2"
-version = "0.1.0"
+version = "2.4.10"
 description = "dm-data-unit-uploader-v2 plugin"
 requires-python = ">=3.10"
 dependencies = [
