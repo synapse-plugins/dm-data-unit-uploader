@@ -1,6 +1,6 @@
 name: dm-data-unit-uploader
 code: dm-data-unit-uploader
-version: 2.4.10
+version: 2.5.0
 category: upload
 description: dm-data-unit-uploader plugin
 supported_data_types:
@@ -14,6 +14,12 @@ actions:
   upload:
     entrypoint: plugin.upload.UploadAction
     method: job
+    ui_schema:
+    - $formkit: text
+      name: group_name
+      label: 묶음 이름
+      help: 데이터 유닛에 할당할 묶음 이름을 입력하세요.
+      required: false
   download:
     entrypoint: synapse_sdk.plugins.testing.sample_actions.DownloadAction
     method: job
