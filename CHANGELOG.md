@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## [2.5.4] - 2026-11-24
+
+### Changed
+- `synapse-sdk` 의존성 `2026.2.10` → `2026.2.24` 업그레이드 (agent 2026.3.x 와 같은 SDK 기준). 업로드 경로에 영향이 있는 SDK 변경:
+  - **2026.2.16 (SYN-7914) 업로드 content guard**: 스크립트가 든 텍스트, 확장자와 시그니처가 다른 파일(HTML 인 `.jpg` 등), 실행 파일, `.env`·개인키 같은 민감 파일은 전송 전에 그 파일이 속한 그룹만 제외하고 나머지를 올린다. joblog 에 `UNSAFE_FILE_CONTENT`·`UNSAFE_FILES_EXCLUDED` 가 남는다. 끄는 옵션은 없다.
+  - 2026.2.16 (SYN-7918): Ray Jobs API 가 명시한 dashboard 주소를 지킨다(`RAY_ADDRESS` 가 주입된 호스트).
+  - 2026.2.24: Ray job 안에서 SDK 가 띄우는 serve replica 환경 수정(업로드 경로는 serve 를 쓰지 않음).
+- `uv.lock` 은 `requires-python >=3.10` 때문에 SDK 2026.2.11 이상으로 다시 해석되지 않아 그대로 둔다(런타임은 `requirements.txt` 를 쓴다).
+
 ## [2.5.3] - 2026-11-13
 
 ### Fixed
