@@ -1,2 +1,2 @@
-synapse-sdk==2026.2.24
+synapse-sdk==2026.2.10
 openpyxl>=3.1.0
