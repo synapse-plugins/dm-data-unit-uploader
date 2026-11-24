@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## [2.5.6] - 2026-11-24
+
+### Changed
+- `synapse-sdk` 의존성 `2026.2.10` → `2026.2.24` (agent 2026.3.x 와 같은 SDK 기준). 플러그인 코드 변경은 없습니다.
+  - 함께 들어오는 동작: SDK 2026.2.16(SYN-7914) 업로드 content guard — 스크립트가 든 텍스트·확장자와 시그니처가 다른 파일·실행 파일·민감 파일이 든 그룹은 전송 전에 제외되고 joblog 에 `UNSAFE_FILE_CONTENT`·`UNSAFE_FILES_EXCLUDED` 가 남는다.
+  - 확인(staging, 11-24): storage 39 chicken 업로드 data unit 19 — 2.5.3 과 같음.
+
 ## [2.5.5] - 2026-11-24
 
 ### Changed
